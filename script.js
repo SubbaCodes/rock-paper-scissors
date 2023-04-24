@@ -9,7 +9,9 @@ const getUserChoice = userInput => {
   ) {
     return userInput;
   } else
-    return 'Wrong input!! Your inputs should be either "rock" OR "paper" OR "scissors"';
+    alert(
+      'Wrong input!! Your inputs should be either "rock" OR "paper" OR "scissors"'
+    );
 };
 
 const getComputerChoice = () => {
@@ -48,7 +50,8 @@ const determineWinner = (userChoice, computerChoice) => {
   } else if (userChoice === "scissors" && computerChoice === "paper") {
     console.log(userChoice, computerChoice);
     return "Hey you won!!";
-  } else return "Ooops something is not right. You have a wrong input!!";
+  } else
+    return "Ooops something is not right. You may have a have a wrong input!!";
 };
 
 console.log(determineWinner(getUserChoice("paper"), getComputerChoice()));
